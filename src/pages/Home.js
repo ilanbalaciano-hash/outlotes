@@ -41,6 +41,30 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="gallery">
+        <h2>Nosso Trabalho em Imagens</h2>
+        <div className="gallery-grid">
+          <div className="gallery-item">
+            <img
+              src="https://images.unsplash.com/photo-1612965110667-4175024b0dcc?w=600&q=80"
+              alt="Lixo eletrônico sendo reciclado"
+            />
+          </div>
+          <div className="gallery-item">
+            <img
+              src="https://images.unsplash.com/photo-1582748298043-0c0d31aa506e?w=600&q=80"
+              alt="Equipamentos eletrônicos descartados"
+            />
+          </div>
+          <div className="gallery-item">
+            <img
+              src="https://images.unsplash.com/photo-1717667745934-53091623e8ee?w=600&q=80"
+              alt="Reciclagem de resíduos eletrônicos"
+            />
+          </div>
+        </div>
+      </section>
+
       <section className="cta">
         <h2>Pronto para descartar seus eletrônicos corretamente?</h2>
         <p>Entre em contato conosco e receba uma proposta personalizada para a sua empresa.</p>
