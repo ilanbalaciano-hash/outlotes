@@ -1,15 +1,16 @@
 import './WhatsAppButton.css';
 
-function trackWppConversion() {
-  if (window.gtag) {
-    window.gtag('event', 'conversion', { send_to: 'AW-878445240/AXnkCM3f6ukaELiF8KID' });
-  }
+const WHATSAPP_URL = 'https://wa.me/5521964901237?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20Outlotes.';
+
+function trackWppConversion(e) {
+  e.preventDefault();
+  return window.gtag_report_conversion(WHATSAPP_URL);
 }
 
 export default function WhatsAppButton() {
   return (
     <a
-      href="https://wa.me/5521964901237?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20Outlotes."
+      href={WHATSAPP_URL}
       target="_blank"
       rel="noreferrer"
       className="whatsapp-float"

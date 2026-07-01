@@ -8,7 +8,16 @@ export default function Footer() {
         <div className="footer-brand">
           <span className="footer-logo">♻ Outlotes</span>
           <p>Gestão responsável de resíduos eletrônicos. Descarte seguro, certificado e sustentável.</p>
-          <a href="https://wa.me/5521964901237" target="_blank" rel="noreferrer" className="footer-whatsapp">
+          <a
+            href="https://wa.me/5521964901237"
+            target="_blank"
+            rel="noreferrer"
+            className="footer-whatsapp"
+            onClick={(e) => {
+              e.preventDefault();
+              return window.gtag_report_conversion('https://wa.me/5521964901237');
+            }}
+          >
             💬 (21) 96490-1237
           </a>
         </div>
