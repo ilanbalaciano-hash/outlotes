@@ -6,6 +6,7 @@ import './Login.css';
 export default function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [captcha, setCaptcha] = useState(false);
   const [error, setError] = useState('');
   const { login } = useAuth();
   const navigate = useNavigate();
@@ -13,6 +14,10 @@ export default function Login() {
   function handleSubmit(e) {
     e.preventDefault();
     setError('');
+    if (!captcha) {
+      setError('Por favor, confirme que você não é um robô.');
+      return;
+    }
     const ok = login(username, password);
     if (ok) {
       navigate('/dashboard');
@@ -51,6 +56,22 @@ export default function Login() {
               required
             />
           </div>
+
+          <div className="login-recaptcha">
+            <label className="recaptcha-check">
+              <input
+                type="checkbox"
+                checked={captcha}
+                onChange={e => setCaptcha(e.target.checked)}
+              />
+              <span>Não sou um robô</span>
+            </label>
+            <div className="recaptcha-brand">
+              <span>reCAPTCHA</span>
+              <small>Privacidade · Termos</small>
+            </div>
+          </div>
+
           {error && <div className="login-error">{error}</div>}
           <button type="submit" className="login-btn">Entrar</button>
         </form>

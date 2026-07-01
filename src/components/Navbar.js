@@ -14,13 +14,12 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <Link to="/" className="navbar-logo">
-        <span className="logo-icon">♻</span> Outlotes
+        <img src="/logo-white.png" alt="Outlotes" className="navbar-logo-img" />
       </Link>
       <ul className="navbar-links">
         <li><Link to="/">Home</Link></li>
         <li><Link to="/quem-somos">Quem Somos</Link></li>
-        <li><Link to="/projetos">Projetos</Link></li>
-        <li><Link to="/parceiros">Parceiros</Link></li>
+        <li><Link to="/parceiros">Parceiros e Clientes</Link></li>
         <li><Link to="/contato">Contato</Link></li>
         {user ? (
           <>

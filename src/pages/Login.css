@@ -63,6 +63,53 @@
   border-color: var(--green);
 }
 
+.login-recaptcha {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1.5px solid var(--gray-200);
+  border-radius: 10px;
+  padding: 14px 16px;
+  background: var(--gray);
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.recaptcha-check {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.92rem;
+  color: var(--dark);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.recaptcha-check input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: var(--green);
+}
+
+.recaptcha-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.recaptcha-brand span {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--gray-600);
+}
+
+.recaptcha-brand small {
+  font-size: 0.65rem;
+  color: var(--gray-400);
+}
+
 .login-error {
   background: #ffebee;
   color: #c62828;

@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import WhatsAppButton from './components/WhatsAppButton';
 import Home from './pages/Home';
 import QuemSomos from './pages/QuemSomos';
 import Projetos from './pages/Projetos';
@@ -40,6 +41,7 @@ function AppLayout() {
         </Routes>
       </main>
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 }
